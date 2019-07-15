@@ -28,5 +28,4 @@ function watch() {
   gulp.watch('./scripts/**/*.js').on('change', browserSync.reload);
 }
 
-exports.style = style;
-exports.watch = watch;
+exports.default = watch;
