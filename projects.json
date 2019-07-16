@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Smokey Feet",
+    "description": "The previous version of this web site was made with WordPress so here we use the WordPress API to fetch the content into the React app. With a custom WordPress plug-in custom post types were added and they made available to the WordPress API.",
+    "live_url": "https://www.smokeyfeet.com",
+    "code_url": "https://github.com/hakonbja/smokeyTen",
+    "img_url": "../images/sf_card_img.jpg",
+    "type": "website",
+    "technologies": [
+      "React.js",
+      "WordPress API",
+      "PHP",
+      "HTML/CSS"
+    ]
+  }
+]
