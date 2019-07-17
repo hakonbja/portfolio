@@ -55,6 +55,50 @@ const projects = [
   },
 ];
 
+const skills = [
+  {
+    "header": "Code I write",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP"
+    ]
+  },
+  {
+    "header": "Tools I use",
+    "skills": [
+      "React.js",
+      "ESLint",
+      "Gulp",
+      "NPM",
+      "SCSS",
+      "Git",
+      "jQuery",
+      "Bootstrap",
+      "Wordpress"
+    ]
+  },
+  {
+    "header": "Software I use",
+    "skills": [
+      "VS Code",
+      "Figma",
+      "Illustrator",
+      "Photoshop",
+      "InDesign"
+    ]
+  },
+  {
+    "header": "Languages I speak",
+    "skills": [
+      "English",
+      "Dutch",
+      "Icelandic"
+    ]
+  },
+]
+
 function projectTemplate(project, i) {
   // console.log(i % 2 == 1);
   return `

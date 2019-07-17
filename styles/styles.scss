@@ -85,6 +85,13 @@ h4 {
   font-size: 24px;
 }
 
+
+p {
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -175,10 +182,10 @@ section:nth-of-type(4) > .content {
 }
 
 section:nth-of-type(even) {
-  text-align: left;
 
   & > h1 {
     margin-left: 11%;
+    text-align: left;
   }
 
   & > .content {
@@ -188,10 +195,10 @@ section:nth-of-type(even) {
 }
 
 section:nth-of-type(odd) {
-  text-align: right;
 
   & > h1 {
     margin-right: 11%;
+    text-align: right;
   }
 
   & > h1.stroke {
@@ -482,11 +489,6 @@ article:nth-of-type(even) {
     margin-bottom: 10px;
   }
 
-  p {
-    line-height: 1.6;
-    font-weight: 400;
-    font-size: 18px;
-  }
 
   .links {
     padding: 30px 0;
@@ -530,4 +532,11 @@ aside.tech {
   margin: 3px 0;
   padding: 5px 5px 4px;
   font-size: 14px;
+}
+
+/* About section */
+
+.about .content {
+  padding-left: 8%;
+  padding-right: 8%;
 }
