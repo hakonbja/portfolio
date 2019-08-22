@@ -34,35 +34,39 @@ $gradient-four: linear-gradient(138.93deg, #AF6565 19.66%, #ABB448 125.72%);
 /* Styling */
 /* Universal */
 
-body {
-  background-color: $darkblue;
-  color: white;
+html {
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { // to enable smooth scrolling on Chrome
-  html {
-    overflow: hidden;
-    height: 100%;
-  }
-
-  body {
-    overflow: auto;
-    height: 100%;
-  }
+body {
+  background-color: $darkblue;
+  color: white;
 }
 
-@-moz-document url-prefix() {
-  html {
-    overflow: initial;
-    height: initial;
-  }
+// @media screen and (-webkit-min-device-pixel-ratio:0) { // to enable smooth scrolling on Chrome
+//   html {
+//     overflow: hidden;
+//     height: 100%;
+//   }
 
-  body {
-    overflow: initial;
-    height: initial;
-  }
-}
+//   body {
+//     overflow: auto;
+//     height: 100%;
+//   }
+// }
+
+// @-moz-document url-prefix() {
+//   html {
+//     overflow: initial;
+//     height: initial;
+//   }
+
+//   body {
+//     overflow: initial;
+//     height: initial;
+//   }
+// }
 
 h1, h2, h3, h4, h5,
 li, a, p,

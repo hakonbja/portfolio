@@ -18,26 +18,13 @@
 /* Variables */
 /* Styling */
 /* Universal */
-body {
-  background-color: #1A2B3E;
-  color: white;
+html {
+  overflow-y: scroll;
   scroll-behavior: smooth; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  html {
-    overflow: hidden;
-    height: 100%; }
-  body {
-    overflow: auto;
-    height: 100%; } }
-
-@-moz-document url-prefix() {
-  html {
-    overflow: initial;
-    height: initial; }
-  body {
-    overflow: initial;
-    height: initial; } }
+body {
+  background-color: #1A2B3E;
+  color: white; }
 
 h1, h2, h3, h4, h5,
 li, a, p,

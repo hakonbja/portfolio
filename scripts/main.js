@@ -1,3 +1,5 @@
+'use strict'
+
 const projects = [
   {
     "name": "Smokey Feet",
@@ -278,21 +280,23 @@ function onSubmitFailure() {
 
 
 /* Fade hero background on scroll */
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 160) {
-    setBgOpacity(window.scrollY);
-  }
-});
 
-function setBgOpacity(y) {
-  const bg = document.getElementById('bg-gradient');
+window.onscroll = setBgOpacity;
+
+function setBgOpacity() {
+  const y = window.scrollY;
+  console.log("scrolling");
   const startY = 100;
   const endY = 800;
   const delta =-1/(endY - startY);
   const constant = endY/(endY - startY);
   const opacity = y * delta + constant;
-  console.log(opacity);
-  bg.style.opacity = opacity;
+
+  if (window.scrollY > startY) {
+    const bg = document.getElementById('bg-gradient');
+    console.log(opacity);
+    bg.style.opacity = opacity;
+  }
 }
 
 document.onreadystatechange = () => {
