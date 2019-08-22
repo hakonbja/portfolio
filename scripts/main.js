@@ -100,7 +100,6 @@ const skills = [
 ]
 
 function projectTemplate(project, i) {
-  // console.log(i % 2 == 1);
   return `
   <article class="${(i % 2 == 1) ? `flyLeft` : `flyRight`}">
     <aside class="image">
@@ -109,8 +108,8 @@ function projectTemplate(project, i) {
     <div class="mid-container">
       <h3>${project.name}</h3>
       <p>${project.description}</p>
-      <div class="links">
-        <ul>
+      <div class="links-container">
+        <ul class="links">
           ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank">Live Demo</a></li>` : ``}
           ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank">View Code</a></li>` : ``}
         </ul>
@@ -132,6 +131,26 @@ function renderProjects() {
   `;
 }
 
+function skillsTemplate(skillGroup) {
+  return `
+    <article>
+      <h5>${skillGroup.header}</h5>
+      <ul class="skillsList">
+        ${skillGroup.skills.map( skill => {
+          return `
+            <li>${skill}</li>`
+        }).join('')}
+      </ul>
+    </article>
+  `
+}
+
+function renderSkills() {
+  document.getElementById('allSkills').innerHTML = `
+  ${skills.map(skillsTemplate).join('')}
+  `;
+}
+
 /* Intersection Observers */
   /* sections <-> navlinks observer */
 function setSectionsObservers() {
@@ -141,7 +160,7 @@ function setSectionsObservers() {
     rootMargin: "-445px 0px -240px 0px",
   };
   
-  const sectionsObserver = new IntersectionObserver((entries, sectionsObserver) => {
+  const sectionsObserver = new IntersectionObserver((entries) => {
     entries.forEach( (entry) => {
       const linkId = `${entry.target.id}Link`
       const link = document.getElementById(linkId);
@@ -203,11 +222,86 @@ function setArticleObserver() {
 }
 
 
+/* Contact form functionality */
+
+function enableFormSubmission() {
+  document.getElementById('contact-form').addEventListener('submit', sendDataToAPI);
+}
+
+function sendDataToAPI(e) {
+  console.log("sending to API: ");
+  e.preventDefault();
+
+  document.getElementById('submit-success').classList.remove('submit-shown');
+  document.getElementById('submit-failure').classList.remove('submit-shown');
+
+  const formName = document.querySelector('.form-name').value;
+  const formEmail = document.querySelector('.form-email').value;
+  const formMessage = document.querySelector('.form-message').value;
+
+  const body = {
+    name: formName,
+    email: formEmail,
+    message: formMessage
+  }
+
+  const endpoint = 'https://957gy8fzk0.execute-api.eu-west-1.amazonaws.com/live/contact';
+
+  const lambdaRequest = new Request(endpoint, {
+    method: 'POST',
+    // Quick note: 'no-cors' mode is for development on localhost only!
+    // mode: 'no-cors',
+    body: JSON.stringify(body),
+  });
+
+  fetch(lambdaRequest)
+  .then(response => {
+    console.log(response.status);
+    if (response.status === 200) {
+      onSubmitSuccess();
+    } else {
+      onSubmitFailure();
+    }
+  })
+  .catch(error => console.log(error));
+}
+
+function onSubmitSuccess() {
+  document.getElementById('submit-success').classList.add('submit-shown');
+  document.getElementById('submit-failure').classList.remove('submit-shown');
+}
+
+function onSubmitFailure() {
+  document.getElementById('submit-failure').classList.add('submit-shown');
+  document.getElementById('submit-success').classList.remove('submit-shown');
+}
+
+
+/* Fade hero background on scroll */
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 160) {
+    setBgOpacity(window.scrollY);
+  }
+});
+
+function setBgOpacity(y) {
+  const bg = document.getElementById('bg-gradient');
+  const startY = 100;
+  const endY = 800;
+  const delta =-1/(endY - startY);
+  const constant = endY/(endY - startY);
+  const opacity = y * delta + constant;
+  console.log(opacity);
+  bg.style.opacity = opacity;
+}
+
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     renderProjects();
+    renderSkills();
     setSectionsObservers();
     setHeroObserver();
     setArticleObserver();
+    enableFormSubmission();
   }
 }

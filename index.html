@@ -47,6 +47,10 @@
 
     <main>
       <section id="home" class="hero">
+        <div class="big-logo">
+            <img src="./images/lying_h_big.svg" alt="">
+        </div>
+        <div id="bg-gradient" class="bg-gradient"></div>
         <div class="hero-wrapper">
           <div class="heading">
             <h1>H<span class="lowercase">á</span>kon</h1>
@@ -54,19 +58,17 @@
           <div class="subheading">
             <h2>A front-end developer passionate about good looking UI and <span class="frame">readable&nbsp;code&nbsp;.</span></h2>
           </div>
-          <div class="links">
-            <ul>
+          <div class="links-container">
+            <ul class="links">
               <li><a href="#projects">Projects</a></li>
               <li><a>Download CV</a></li>
             </ul>
-            <a class="chevron" href="#projects">
-              <img src="./images/chevron.svg" alt="">
-            </a>
+            <div class="chevron-container">
+              <a class="chevron" href="#projects">
+                <img src="./images/chevron.svg" alt="">
+              </a>
+            </div>
           </div>
-          <div class="big-logo">
-              <img src="./images/lying_h_big.svg" alt="">
-          </div>
-
         </div>
       </section>
 
@@ -82,18 +84,55 @@
         <h1 class="stroke">About</h1>
         <h1 class="fill">About</h1>
         <div class="content">
-          <h3>Hi, my name is Hákon...</h3>
-          <p>I’m a self-taught developer from Iceland with a degree in music performance. I like designing interfaces but nothing beats the feeling of coding and seeing wireframes come to live.</p>
-          <p>With every new project I do I try to learn something new by exploring a  technology or a technique I haven’t used before.</p>
-          <p>I’m looking for employment in the Amsterdam area in web development. If you’re looking for an enthusiastic front-end developer drop me a line so we can talk!</p>
-          <!-- <h3>Skills</h3> -->
+          <div class="intro">
+            <h3>Hi, my name is Hákon...</h3>
+            <p>I’m a self-taught developer from Iceland with a degree in music performance. I like designing interfaces but nothing beats the feeling of coding and seeing wireframes come to live.</p>
+            <p>With every new project I do I try to learn something new by exploring a  technology or a technique I haven’t used before.</p>
+            <p>I’m looking for employment in the Amsterdam area in web development. If you’re looking for an enthusiastic front-end developer drop me a line so we can talk!</p>
+          </div>
+          <div class="skills">
+            <h3>Skills</h3>
+            <div id="allSkills"></div>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li><a href="">Download CV</a></li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section id="contact" class="contact">
         <h1 class="stroke">Contact</h1>
         <h1 class="fill">Contact</h1>
-        <div class="content"></div>
+        <div class="content">
+
+          <form class="contact-form" id="contact-form">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" name="name" class="form-name" required/>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" name="email" class="form-email" required/>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea type="text" name="message" class="form-message" required></textarea>
+            </div>
+            <div class="submit-wrapper">
+              <input type="submit" class="submit-button" id ="submit-button" value="Send"/>
+              <p id="submit-success" class="submit-success">Your message has been sent.</p>
+              <p id="submit-failure" class="submit-failure">Oops, something went wrong...</p>
+            </div>
+          </form>
+
+          <ul class="links">
+            <li><a href="mailto:hakonbja@gmail.com">E-mail</a></li>
+            <li><a href="https://www.linkedin.com/in/h%C3%A1kon-bjarnason-ba6318177/" target="_empty">LinkedIn</a></li>
+          </ul>
+
+        </div>
       </section>
     </main>
 
