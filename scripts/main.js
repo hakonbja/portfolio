@@ -281,24 +281,54 @@ function onSubmitFailure() {
 
 /* Fade hero background on scroll */
 
-window.onscroll = setBgOpacity;
+window.addEventListener('scroll', () => {
+  decreaseOpacity(50, 800, 'bg-gradient');
+  increaseOpacity(400, 800, 'logo');
+});
 
-function setBgOpacity() {
-  const y = window.scrollY;
-  const startY = 50;
-  const endY = 800;
+function decreaseOpacity(startY, endY, id) {
+  changeOpacity(startY, endY, id, false);
+}
+
+function increaseOpacity(startY, endY, id) {
+  changeOpacity(startY, endY, id, true);
+}
+
+function changeOpacity(startY, endY, id, bool) {
+  // if bool === true => increase opacity, if false => decrease opacity
+  const currentY = window.scrollY;
+  const target = document.getElementById(id);
   const delta = -1 / (endY - startY);
   const constant = endY / (endY - startY);
-  const opacity = y * delta + constant;
+  let opacity = currentY * delta + constant;
 
-  if (opacity < -0.1) {
-    return;
+  if (bool) {
+    opacity = 1 - opacity;
+
+    if (currentY <= startY) {
+      target.style.opacity = 0;
+      target.style.visibility = 'hidden';
+      return;
+    } else if (currentY > endY) {
+      target.style.opacity = 1;
+      return;
+    }
   }
 
-  if (window.scrollY > startY) {
-    const bg = document.getElementById('bg-gradient');
-    bg.style.opacity = opacity;
+  if (!bool) {
+    if (currentY <= startY) {
+      target.style.opacity = 1;
+      return;
+    } else if (currentY > endY) {
+      target.style.opacity = 0;
+      target.style.visibility = 'hidden';
+      return;
+    }
   }
+
+  target.style.opacity = opacity;
+  target.style.visibility = 'visible';
+  
 }
 
 document.onreadystatechange = () => {

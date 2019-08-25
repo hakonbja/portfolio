@@ -30,6 +30,7 @@ $gradient-two: linear-gradient(250.26deg, #8C50EE -1.02%, #D15A61 104.87%);
 $gradient-three: linear-gradient(145.19deg, #9DAC3E 6.47%, #4893B4 111.46%);
 $gradient-four: linear-gradient(138.93deg, #AF6565 19.66%, #ABB448 125.72%);
 
+$original-logo-fill: #2093c9;
 
 /* Styling */
 /* Universal */
@@ -103,6 +104,7 @@ header.visible {
 
 header .logo {
   padding: 5px;
+  opacity: 0;
 }
 
 header .logo a {

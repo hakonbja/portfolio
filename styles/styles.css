@@ -73,7 +73,8 @@ header.visible {
   background-color: #1A2B3E75; }
 
 header .logo {
-  padding: 5px; }
+  padding: 5px;
+  opacity: 0; }
 
 header .logo a {
   display: inline-block;
