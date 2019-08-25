@@ -44,30 +44,6 @@ body {
   color: white;
 }
 
-// @media screen and (-webkit-min-device-pixel-ratio:0) { // to enable smooth scrolling on Chrome
-//   html {
-//     overflow: hidden;
-//     height: 100%;
-//   }
-
-//   body {
-//     overflow: auto;
-//     height: 100%;
-//   }
-// }
-
-// @-moz-document url-prefix() {
-//   html {
-//     overflow: initial;
-//     height: initial;
-//   }
-
-//   body {
-//     overflow: initial;
-//     height: initial;
-//   }
-// }
-
 h1, h2, h3, h4, h5,
 li, a, p,
 label, input, textarea,
@@ -237,11 +213,16 @@ section > h1::before {
 
 section > h1.stroke {
   position: absolute;
-  top: 50px;
+  // top: 50px;
   z-index: 2;
   color: $darkblue;
   -webkit-text-fill-color: #fff0;
   -webkit-text-stroke: 2px #1A2B3E; 
+}
+
+section:not(.hero):not(.projects) > .content {
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 .links {
@@ -306,6 +287,81 @@ section > h1.stroke {
     letter-spacing: 0.03em;
     cursor: pointer;
     z-index: 1;
+  }
+}
+
+/* Responsive Universal */
+
+@media screen and (max-width: 870px) {
+  h1 {
+    font-size: 120px;
+  }
+
+  section > h1 {
+    top: 42px;
+  }
+
+  section:nth-of-type(even) > .content {
+    margin-left: 18%;
+    margin-right: 9%;
+  }
+
+  section:nth-of-type(odd) > .content {
+    margin-left: 9%;
+    margin-right: 18%;
+  }
+}
+
+
+@media screen and (max-width: 710px) {
+  h1 {
+    font-size: 105px;
+  }
+
+  section > h1 {
+    top: 37px;
+  }
+
+  section:not(.hero):not(.projects) > .content {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  section > h1 {
+    top: 28px;
+  }
+
+  section:nth-of-type(1n+1) {
+    > h1 {
+      text-align: right;
+      margin-right: 11%;
+    }
+
+    > h1.stroke {
+      right: 0;
+    }
+    
+    > .content {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  section {
+    margin-bottom: 150px;
+  }
+
+}
+
+@media screen and (max-width: 490px) {
+  h1 {
+    font-size: 65px;
   }
 }
 
@@ -498,7 +554,7 @@ a.chevron {
   padding: 30px 0;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: 1fr 60% 1fr;
+  grid-template-columns: 1fr 2.5fr 1fr;
   grid-column-gap: 25px;
   transition: all 750ms ease;
 }
@@ -520,6 +576,7 @@ article.flown {
 
 article:hover img {
   filter: grayscale(0);
+  transform: scale(1.03);
 }
 
 article:nth-of-type(odd) {
@@ -594,9 +651,10 @@ aside {
   img {
     position: relative;
     width: 130%;
+    max-width: 300px;
     height: auto;
     filter: grayscale(100%);
-    transition: filter 300ms;
+    transition: filter 300ms, transform 300ms;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   }
 }
@@ -623,12 +681,6 @@ aside {
 }
 
 /* About section */
-
-.about .content,
-.contact .content {
-  padding-left: 12%;
-  padding-right: 12%;
-}
 
 .skills {
   margin-top: 32px;
@@ -687,7 +739,7 @@ textarea {
   position: relative;
   background-color: white;
   width: min-content;
-  margin: 16px auto 64px;
+  margin: 24px auto 64px;
 }
 
 .submit-button {

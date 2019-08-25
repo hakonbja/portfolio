@@ -3,7 +3,7 @@
 const projects = [
   {
     "name": "Smokey Feet",
-    "description": "The previous version of this web site was made with WordPress so here the WordPress API is used to fetch the content into a React app. With a custom WordPress plug-in custom post types were added and they made available to the WordPress API.",
+    "description": "The WordPress API is used to fetch the content into a React app. With a custom WordPress plug-in custom post types were added and they made available to the WordPress API.",
     "live_url": "https://www.smokeyfeet.com",
     "code_url": "https://github.com/hakonbja/smokeyTen",
     "img_url": "../images/sf_card_img.jpg",
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     "name": "Mastermind",
-    "description": "This is my React.js version of the board game Mastermind from the 70's. The original board game is meant for two players, the codemaker and the codebreaker, but here you play alone as the codebreaker against the computer.",
+    "description": "A React.js version of the board game Mastermind from the 70's. Try to guess the color code in as few tries possible.",
     "live_url": "https://mm2.hakonbjarnason.com",
     "code_url": "https://github.com/hakonbja/mastermind_v2",
     "img_url": "../images/mm_card_img.png",
@@ -43,8 +43,8 @@ const projects = [
   },
   {
     "name": "Pianist Hákon Bjarnason",
-    "description": "My first public website I made for my own piano teaching business. It's a simple one pager with a contact form whose back end is set up through AWS.",
-    "live_url": "https://www.hakonbjarnason.com",
+    "description": "My first public website I made for my own piano teaching business.",
+    "live_url": "https://hakonbjarnason.com",
     "code_url": "https://github.com/hakonbja/hakonbjarnason.com",
     "img_url": "../images/hb_card_img.jpg",
     "type": "website",
@@ -105,7 +105,7 @@ function projectTemplate(project, i) {
   return `
   <article class="${(i % 2 == 1) ? `flyLeft` : `flyRight`}">
     <aside class="image">
-      <a href="${project.live_url}" target="_blank" title="Go to website"><img src="${project.img_url}"/></a>
+      <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
     </aside>
     <div class="mid-container">
       <h3>${project.name}</h3>
@@ -285,16 +285,18 @@ window.onscroll = setBgOpacity;
 
 function setBgOpacity() {
   const y = window.scrollY;
-  console.log("scrolling");
-  const startY = 100;
+  const startY = 50;
   const endY = 800;
-  const delta =-1/(endY - startY);
-  const constant = endY/(endY - startY);
+  const delta = -1 / (endY - startY);
+  const constant = endY / (endY - startY);
   const opacity = y * delta + constant;
+
+  if (opacity < -0.1) {
+    return;
+  }
 
   if (window.scrollY > startY) {
     const bg = document.getElementById('bg-gradient');
-    console.log(opacity);
     bg.style.opacity = opacity;
   }
 }
