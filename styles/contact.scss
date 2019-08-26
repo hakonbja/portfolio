@@ -1,0 +1,66 @@
+/* Contact section */
+
+label,
+input,
+textarea,
+.submit-button {
+  display: block;
+  font-size: 18px;
+}
+
+label {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+input:not(.submit-button), textarea {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border-top: none;
+  border-right: none;
+  border-color: $darkblue;
+  border-width: 3px;
+  padding-left: 6px;
+}
+
+textarea {
+  height: 120px;
+}
+
+.submit-wrapper {
+  position: relative;
+  background-color: white;
+  width: min-content;
+  margin: 24px auto 64px;
+}
+
+.submit-button {
+  background: $gradient-four;
+  padding: 12px;
+  border: none;
+  color: $darkblue;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 26px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit-success,
+.submit-failure {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 500ms;
+  font-weight: 500;
+}
+
+.submit-shown {
+  opacity: 1;
+  visibility: visible;
+}

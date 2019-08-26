@@ -10,7 +10,7 @@ const projects = [
     "type": "website",
     "technologies": [
       "React.js",
-      "WordPress API",
+      "REST API",
       "PHP",
       "HTML/CSS"
     ]
@@ -104,26 +104,48 @@ const skills = [
 function projectTemplate(project, i) {
   return `
   <article class="${(i % 2 == 1) ? `flyLeft` : `flyRight`}">
-    <aside class="image">
-      <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
-    </aside>
-    <div class="mid-container">
-      <h3>${project.name}</h3>
-      <p>${project.description}</p>
-      <div class="links-container">
+    <div class="desktop">
+      <aside class="image">
+        <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
+      </aside>
+      <div class="mid-container">
+        <h3>${project.name}</h3>
+        <p>${project.description}</p>
+        <div class="links-container">
+          <ul class="links">
+            ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank">Live Demo</a></li>` : ``}
+            ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank">View Code</a></li>` : ``}
+          </ul>
+        </div>
+      </div>
+      <aside class="tech">
+        <h4 class="tech-type">/${project.type}/</h4>
+        <ul class="tech-list">
+          ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+        </ul>
+      </aside>
+    </div>
+    
+      <div class="mobile">
+        <h3>${project.name}</h3>
+        <h4 class="tech-type">/${project.type}/</h4>
+        <div class="text-image-wrapper">
+          <div class="image-container">
+            <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
+          </div>
+          <p>${project.description}</p>
+        </div>
+        <ul class="tech-list">
+          ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+        </ul>
         <ul class="links">
           ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank">Live Demo</a></li>` : ``}
           ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank">View Code</a></li>` : ``}
         </ul>
       </div>
-    </div>
-    <aside class="tech">
-      <h4 class="tech-type">/${project.type}/</h4>
-      <ul class="tech-list">
-        ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
-      </ul>
-    </aside>
-  </article>
+
+    </article>
+
   `
 }
 
@@ -137,7 +159,7 @@ function skillsTemplate(skillGroup) {
   return `
     <article>
       <h5>${skillGroup.header}</h5>
-      <ul class="skillsList">
+      <ul class="skills-list">
         ${skillGroup.skills.map( skill => {
           return `
             <li>${skill}</li>`
@@ -325,10 +347,9 @@ function changeOpacity(startY, endY, id, bool) {
       return;
     }
   }
-
+  
   target.style.opacity = opacity;
   target.style.visibility = 'visible';
-  
 }
 
 document.onreadystatechange = () => {

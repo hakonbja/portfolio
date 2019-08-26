@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 // compile scss into css
 function style() {
   // 1. locate scss file
-  return gulp.src('./styles/**/*.scss')
+  return gulp.src('./styles/styles.scss')
   // 2. pass that file through sass compiler
     .pipe(sass().on('error', sass.logError))
   // 2.1 autoprefix
