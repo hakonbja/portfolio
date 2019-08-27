@@ -254,11 +254,15 @@ section:not(.hero):not(.projects) > .content {
     padding-left: 9%;
     padding-right: 9%; } }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 640px) {
   html {
     font-size: 15px; }
   h1 {
     font-size: 15vw; }
+  .desktop {
+    display: none !important; }
+  .mobile {
+    display: block; }
   section:nth-of-type(1n+1) > h1 {
     text-align: right;
     margin-right: 11%; }
@@ -346,6 +350,9 @@ section:not(.hero):not(.projects) > .content {
     border: 0.04em solid white;
     padding: 0 0.15em;
     margin: 0 -0.15em; }
+  @media screen and (max-width: 640px) {
+    .hero .subheading .frame {
+      padding-top: 0.2em; } }
   .hero .links-container {
     display: flex;
     flex-direction: column;
@@ -501,7 +508,7 @@ aside img {
   width: -moz-max-content;
   width: max-content;
   margin: 0.2rem 0;
-  padding: 0.3em 0.3rem 0.25em; }
+  padding: 0.4em 0.4rem 0.2em; }
 
 .projects article .mobile {
   margin-bottom: 5rem;
@@ -559,12 +566,6 @@ aside img {
   .projects article {
     grid-template-columns: 1fr 2fr 1fr;
     grid-column-gap: 15px; } }
-
-@media screen and (max-width: 620px) {
-  .desktop {
-    display: none !important; }
-  .mobile {
-    display: block; } }
 
 /* About section */
 .skills {

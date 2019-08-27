@@ -135,10 +135,11 @@ aside {
   border: 2px solid $darkblue;
   width: max-content;
   margin: 0.2rem 0;
-  padding: 0.3em 0.3rem 0.25em;
+  padding: 0.4em 0.4rem 0.2em;
+  // padding: 0.3em;
 }
 
-.projects article .mobile {
+.projects article .mobile { // mobile is visible at and below 640px
   margin-bottom: 5rem;
   padding: 0 1rem;
 
@@ -170,6 +171,7 @@ aside {
     li {
       display: inline-block;
       margin-right: 0.5rem;
+      // padding-top: 0.2em;
     }
   }
 
@@ -229,20 +231,4 @@ aside {
     grid-template-columns: 1fr 2fr 1fr;
     grid-column-gap: 15px;
   }
-}
-
-@media screen and (max-width: 710px) {
- 
-}
-
-@media screen and (max-width: 620px) {
-  .desktop {
-    display: none !important;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  
 }

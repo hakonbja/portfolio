@@ -84,6 +84,12 @@
     margin: 0 -0.15em;
   }
 
+  @media screen and (max-width: 640px){
+    .subheading .frame {
+      padding-top: 0.2em;
+    }
+  }
+
   .links-container {
     display: flex;
     flex-direction: column;
@@ -101,7 +107,6 @@
 
   .links.links-hero {
     li {
-      // font-size: 26px;
       font-size: 1.625rem;
     }
   }

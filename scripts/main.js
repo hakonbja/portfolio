@@ -360,6 +360,15 @@ function changeOpacity(startPct, endPct, id, bool) {
   target.style.visibility = 'visible';
 }
 
+/* Detect MacOS and change CSS */
+
+function ifMac() {
+  if (navigator.appVersion.indexOf("Mac")!=-1) {
+    document.getElementById('frame').style.paddingTop = '0.2em';
+    console.log("padding changed on frame");
+  }
+}
+
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
     renderProjects();
@@ -369,5 +378,6 @@ document.onreadystatechange = () => {
     setArticleObserver();
     enableFormSubmission();
     setFadeChanges();
+    ifMac();
   }
 }
