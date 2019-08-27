@@ -35,7 +35,7 @@ label, input, textarea,
   font-weight: 700; }
 
 h1 {
-  font-size: 9rem;
+  font-size: 10vw;
   letter-spacing: 0.03rem; }
 
 h2 {
@@ -204,23 +204,23 @@ section:not(.hero):not(.projects) > .content {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 2px;
+    height: 0.07em;
     background-color: white; }
   .links li:first-of-type > a::before,
   .links li:last-of-type > a::after {
     content: "";
     position: absolute;
     z-index: -1;
-    height: 25px;
-    width: 25px;
+    height: 1em;
+    width: 1em;
     background: repeating-linear-gradient(to right, #ffffff00, #ffffff00 2px, #ffffff50 2px, #ffffff50 4px); }
   .links li:first-of-type > a::before {
-    left: -15px;
-    bottom: -8px;
+    left: -0.6em;
+    bottom: -0.3em;
     transform: rotate(90deg); }
   .links li:last-of-type > a::after {
-    right: -15px;
-    top: -8px; }
+    right: -0.6em;
+    top: -0.3em; }
   .links a {
     position: relative;
     text-transform: uppercase;
@@ -239,7 +239,7 @@ section:not(.hero):not(.projects) > .content {
 /* Responsive Universal */
 @media screen and (max-width: 870px) {
   html {
-    font-size: 13px; }
+    font-size: 14px; }
   section:nth-of-type(even) > .content {
     margin-left: 18%;
     margin-right: 9%; }
@@ -257,8 +257,8 @@ section:not(.hero):not(.projects) > .content {
 @media screen and (max-width: 620px) {
   html {
     font-size: 15px; }
-  section > h1 {
-    font-size: 6rem; }
+  h1 {
+    font-size: 15vw; }
   section:nth-of-type(1n+1) > h1 {
     text-align: right;
     margin-right: 11%; }
@@ -281,14 +281,6 @@ section:not(.hero):not(.projects) > .content {
 @media screen and (max-width: 420px) {
   html {
     font-size: 11px; } }
-
-@media screen and (max-width: 390px) {
-  html {
-    font-size: 10px; } }
-
-@media screen and (max-width: 350px) {
-  html {
-    font-size: 9px; } }
 
 /* Hero section */
 .hero {
@@ -337,7 +329,7 @@ section:not(.hero):not(.projects) > .content {
   .hero .lowercase {
     text-transform: lowercase; }
   .hero h1 {
-    font-size: 13em;
+    font-size: 15vw;
     color: white;
     -webkit-text-fill-color: #fff0;
     -webkit-text-stroke: 0.01em white;
@@ -366,7 +358,6 @@ section:not(.hero):not(.projects) > .content {
     height: 45px;
     flex: 1; }
   .hero .links.links-hero li {
-    font-size: 26px;
     font-size: 1.625rem; }
   .hero .chevron-container {
     display: flex;
@@ -376,6 +367,10 @@ section:not(.hero):not(.projects) > .content {
     margin-bottom: 16px; }
 
 /* Responsive Hero section */
+@media screen and (min-width: 2500px) {
+  .hero h1 {
+    font-size: 13vw; } }
+
 @media screen and (max-width: 1100px) {
   .hero {
     font-size: 14px; } }
@@ -383,39 +378,23 @@ section:not(.hero):not(.projects) > .content {
 @media screen and (max-width: 950px) {
   .hero {
     font-size: 12px; }
+    .hero h1 {
+      font-size: 19vw; }
     .hero .subheading {
       width: 100%; } }
 
-@media screen and (max-width: 870px) {
-  .hero {
-    font-size: 11px; } }
-
 @media screen and (max-width: 700px) {
-  .hero {
-    font-size: 10px; }
-    .hero .hero-wrapper {
-      padding-left: 4em;
-      padding-right: 4em; } }
+  .hero .hero-wrapper {
+    padding-left: 5em;
+    padding-right: 5em; } }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 510px) {
   .hero {
     font-size: 9px; } }
 
-@media screen and (max-width: 560px) {
-  .hero {
-    font-size: 8px; } }
-
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 380px) {
   .hero {
     font-size: 7px; } }
-
-@media screen and (max-width: 430px) {
-  .hero {
-    font-size: 6px; } }
-
-@media screen and (max-width: 350px) {
-  .hero {
-    font-size: 5px; } }
 
 /* Projects */
 .projects {

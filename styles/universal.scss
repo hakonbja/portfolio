@@ -20,7 +20,7 @@ label, input, textarea,
 }
 
 h1 {
-  font-size: 9rem;
+  font-size: 10vw;
   letter-spacing: 0.03rem;
 }
 
@@ -231,7 +231,7 @@ section:not(.hero):not(.projects) > .content {
     display: inline-block;
     margin-right: 1em;
     white-space: nowrap;
-    font-size: 1.25rem;
+    font-size: 1.25rem; // 20px by default
   }
 
   li:last-child {
@@ -244,7 +244,7 @@ section:not(.hero):not(.projects) > .content {
       left: 0;
       right: 0;
       bottom: 0;
-      height: 2px;
+      height: 0.07em;
       background-color: white;
   }
 
@@ -253,8 +253,8 @@ section:not(.hero):not(.projects) > .content {
     content: "";
     position: absolute;
     z-index: -1;
-    height: 25px;
-    width: 25px;
+    height: 1em;
+    width: 1em;
     background: repeating-linear-gradient(
       to right,
       #ffffff00,
@@ -264,15 +264,18 @@ section:not(.hero):not(.projects) > .content {
     );
   }
 
+  $vertical-offset: -0.6em;
+  $horizontal-offset: -0.3em;
+
   li:first-of-type > a::before {
-    left: -15px;
-    bottom: -8px;
+    left: $vertical-offset;
+    bottom: $horizontal-offset;
     transform: rotate(90deg);
   }
 
   li:last-of-type > a::after {
-    right: -15px;
-    top: -8px;
+    right: $vertical-offset;
+    top: $horizontal-offset;
   }
 
   a {
@@ -299,7 +302,7 @@ section:not(.hero):not(.projects) > .content {
 
 @media screen and (max-width: 870px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   section:nth-of-type(even) > .content {
@@ -330,8 +333,8 @@ section:not(.hero):not(.projects) > .content {
     font-size: 15px;
   }
 
-  section > h1 {
-    font-size: 6rem;
+  h1 {
+    font-size: 15vw;
   }
   
   section:nth-of-type(1n+1) {
@@ -374,14 +377,14 @@ section:not(.hero):not(.projects) > .content {
   }
 }
 
-@media screen and (max-width: 390px) {
-  html {
-    font-size: 10px;
-  }
-}
+// @media screen and (max-width: 390px) {
+//   html {
+//     font-size: 10px;
+//   }
+// }
 
-@media screen and (max-width: 350px) {
-  html {
-    font-size: 9px;
-  }
-}
+// @media screen and (max-width: 350px) {
+//   html {
+//     font-size: 9px;
+//   }
+// }
