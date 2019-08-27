@@ -301,26 +301,33 @@ function onSubmitFailure() {
 }
 
 
-/* Fade hero background on scroll */
+/* Fade things on scroll */
 
-window.addEventListener('scroll', () => {
-  decreaseOpacity(50, 800, 'bg-gradient');
-  increaseOpacity(400, 800, 'logo');
-  decreaseOpacity(50, 500, 'big-logo');
-});
+function setFadeChanges() {
 
-function decreaseOpacity(startY, endY, id) {
-  changeOpacity(startY, endY, id, false);
+
+  window.addEventListener('scroll', () => {
+    decreaseOpacity(0.05, 0.95, 'bg-gradient');
+    increaseOpacity(0.45, 0.85, 'logo');
+    decreaseOpacity(0.05, 0.53, 'big-logo');
+  });
 }
 
-function increaseOpacity(startY, endY, id) {
-  changeOpacity(startY, endY, id, true);
+
+function decreaseOpacity(startPct, endPct, id) {
+  changeOpacity(startPct, endPct, id, false);
 }
 
-function changeOpacity(startY, endY, id, bool) {
+function increaseOpacity(startPct, endPct, id) {
+  changeOpacity(startPct, endPct, id, true);
+}
+
+function changeOpacity(startPct, endPct, id, bool) {
   // if bool === true => increase opacity, if false => decrease opacity
   const currentY = window.scrollY;
   const target = document.getElementById(id);
+  const startY = startPct * window.innerHeight;
+  const endY = endPct * window.innerHeight;
   const delta = -1 / (endY - startY);
   const constant = endY / (endY - startY);
   let opacity = currentY * delta + constant;
@@ -361,5 +368,6 @@ document.onreadystatechange = () => {
     setHeroObserver();
     setArticleObserver();
     enableFormSubmission();
+    setFadeChanges();
   }
 }
