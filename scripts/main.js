@@ -306,6 +306,7 @@ function onSubmitFailure() {
 window.addEventListener('scroll', () => {
   decreaseOpacity(50, 800, 'bg-gradient');
   increaseOpacity(400, 800, 'logo');
+  decreaseOpacity(50, 500, 'big-logo');
 });
 
 function decreaseOpacity(startY, endY, id) {
@@ -347,7 +348,7 @@ function changeOpacity(startY, endY, id, bool) {
       return;
     }
   }
-  
+
   target.style.opacity = opacity;
   target.style.visibility = 'visible';
 }
