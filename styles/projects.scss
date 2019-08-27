@@ -4,6 +4,11 @@
   overflow-x: hidden; // useful for flying in animations
 }
 
+.projects .padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .projects article {
   transition: all 750ms ease;
 }

@@ -3,7 +3,7 @@
 const projects = [
   {
     "name": "Smokey Feet",
-    "description": "The WordPress API is used to fetch the content into a React app. With a custom WordPress plug-in custom post types were added and they made available to the WordPress API.",
+    "description": "The WordPress API is used to fetch the content into a React app. With a custom WordPress plug-in custom post types were added and made available to the WordPress API.",
     "live_url": "https://www.smokeyfeet.com",
     "code_url": "https://github.com/hakonbja/smokeyTen",
     "img_url": "../images/sf_card_img.jpg",

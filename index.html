@@ -88,29 +88,44 @@
       <section id="projects" class="projects">
         <h1 class="stroke">Projects</h1>
         <h1 class="fill">Projects</h1>
-        <div class="content">
-          <div id="allProjects"></div>
+        <div class="background">
+          <div class="padding">
+            <div id="allProjects"></div>
+          </div>
         </div>
       </section>
 
       <section id="about" class="about">
         <h1 class="stroke">About</h1>
         <h1 class="fill">About</h1>
-        <div class="content">
-          <div class="intro">
-            <h3>Hi, my name is Hákon...</h3>
-            <p>I’m a self-taught developer from Iceland with a degree in music performance. I like designing interfaces, but nothing beats the feeling of coding and seeing wireframes come to life.</p>
-            <p>With every new project I do I try to learn something new by exploring a  technology or a technique I haven’t used before.</p>
-            <p>I’m looking for employment in the Amsterdam area in web development. If you’re looking for an enthusiastic front-end developer drop me a line so we can talk!</p>
-          </div>
-          <div class="skills">
-            <h3>Skills</h3>
-            <div id="allSkills"></div>
-          </div>
-          <div class="links-container">
-            <ul class="links">
-              <li><a href="">Download CV</a></li>
-            </ul>
+        <div class="background">
+          <div class="padding">
+            <div class="intro">
+              <h3>Hi, my name is Hákon...</h3>
+              <div class="about-grid">
+                <div class="text-container">
+                  <div class="image-container mobile">
+                      <img class="about-photo" src="./images/about_photo_3.1.jpg" alt="Photo of Hákon">
+                    </div>
+                  <p>I’m a self-taught developer from Iceland with a degree in music performance. I like designing interfaces, but nothing beats the feeling of actually coding and seeing wireframes come to life.</p>
+                  <p>With every new project I try to learn something new by exploring a  technology or a technique I haven’t used before.</p>
+                  <p>I’m looking for employment in the Amsterdam area in web development. If you’re looking for an enthusiastic front-end developer drop me a line so we can talk!</p>
+                </div>
+                <div class="image-container desktop">
+                  <img class="about-photo" src="./images/about_photo_3.1.jpg" alt="Photo of Hákon">
+                  <h4 class="caption">/that’s me/</h4>
+                </div>
+              </div>
+            </div>
+            <div class="skills">
+              <h3>Skills</h3>
+              <div id="allSkills"></div>
+            </div>
+            <div class="links-container">
+              <ul class="links">
+                <li><a href="">Download CV</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -118,33 +133,33 @@
       <section id="contact" class="contact">
         <h1 class="stroke">Contact</h1>
         <h1 class="fill">Contact</h1>
-        <div class="content">
-
-          <form class="contact-form" id="contact-form">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" name="name" class="form-name" id="name" required/>
-            </div>
-            <div>
-              <label for="email">E-mail</label>
-              <input type="email" name="email" class="form-email" id="email" required/>
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea name="message" class="form-message" id="message" required></textarea>
-            </div>
-            <div class="submit-wrapper">
-              <input type="submit" class="submit-button" id ="submit-button" value="Send"/>
-              <p id="submit-success" class="submit-success">Your message has been sent.</p>
-              <p id="submit-failure" class="submit-failure">Oops, something went wrong...</p>
-            </div>
-          </form>
-
-          <ul class="links">
-            <li><a href="mailto:hakonbja@gmail.com">E-mail</a></li>
-            <li><a href="https://www.linkedin.com/in/h%C3%A1kon-bjarnason-ba6318177/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-          </ul>
-
+        <div class="background">
+          <div class="padding">
+            <form class="contact-form" id="contact-form">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-name" id="name" required/>
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="form-email" id="email" required/>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea name="message" class="form-message" id="message" required></textarea>
+              </div>
+              <div class="submit-wrapper">
+                <input type="submit" class="submit-button" id ="submit-button" value="Send"/>
+                <p id="submit-success" class="submit-success">Your message has been sent.</p>
+                <p id="submit-failure" class="submit-failure">Oops, something went wrong...</p>
+              </div>
+            </form>
+  
+            <ul class="links">
+              <li><a href="mailto:hakonbja@gmail.com">E-mail</a></li>
+              <li><a href="https://www.linkedin.com/in/h%C3%A1kon-bjarnason-ba6318177/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

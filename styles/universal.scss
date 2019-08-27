@@ -31,6 +31,7 @@ h2 {
 h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h4 {
@@ -155,15 +156,15 @@ section {
   margin-bottom: 15.5rem;
 }
 
-section:nth-of-type(2) > .content {
+section:nth-of-type(2) > .background {
   background: $gradient-two;
 }
 
-section:nth-of-type(3) > .content {
+section:nth-of-type(3) > .background {
   background: $gradient-three;
 }
 
-section:nth-of-type(4) > .content {
+section:nth-of-type(4) > .background {
   background: $gradient-four;
 }
 
@@ -174,9 +175,9 @@ section:nth-of-type(even) {
     text-align: left;
   }
 
-  & > .content {
-    margin-left: 22%;
-    margin-right: 11%;
+  & > .background {
+    margin-left: 22vw;
+    margin-right: 11vw;
   }
 }
 
@@ -191,9 +192,9 @@ section:nth-of-type(odd) {
     right: 0;
   }
   
-  & > .content {
-    margin-left: 11%;
-    margin-right: 22%;
+  & > .background {
+    margin-left: 11vw;
+    margin-right: 22vw;
   }
 
 } 
@@ -216,9 +217,8 @@ section > h1.stroke {
   -webkit-text-stroke: 2px #1A2B3E; 
 }
 
-section:not(.hero):not(.projects) > .content {
-  padding-left: 12%;
-  padding-right: 12%;
+.padding {
+  padding: 6.8rem 12vw;
 }
 
 .links {
@@ -288,10 +288,9 @@ section:not(.hero):not(.projects) > .content {
   }
 }
 
-.content {
+.background {
   z-index: 1;
   position: relative;
-  padding: 6.8rem 0;
 }
 
 .mobile {
@@ -300,31 +299,38 @@ section:not(.hero):not(.projects) > .content {
 
 /* Responsive Universal */
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 1020px) {
   html {
     font-size: 14px;
   }
-
-  section:nth-of-type(even) > .content {
-    margin-left: 18%;
-    margin-right: 9%;
+  
+  section:nth-of-type(even) > .background {
+    margin-left: 18vw;
+    margin-right: 9vw;
   }
 
-  section:nth-of-type(odd) > .content {
-    margin-left: 9%;
-    margin-right: 18%;
+  section:nth-of-type(odd) > .background {
+    margin-left: 9vw;
+    margin-right: 18vw;
   }
 }
 
+@media screen and (max-width: 840px) {
+  .padding {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+}
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 700px) {
   html {
     font-size: 12px;
-  }
-
-  section:not(.hero):not(.projects) > .content {
-    padding-left: 9%;
-    padding-right: 9%;
   }
 }
 
@@ -355,14 +361,19 @@ section:not(.hero):not(.projects) > .content {
       right: 0;
     }
     
-    > .content {
-      margin-left: 10%;
-      margin-right: 10%;
+    > .background {
+      margin-left: 10vw;
+      margin-right: 10vw;
     }
   }
 
   section {
     margin-bottom: 150px;
+  }
+
+  .padding {
+    padding-right: 7vw;
+    padding-left: 7vw;
   }
 
 }
