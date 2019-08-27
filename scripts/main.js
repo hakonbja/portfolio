@@ -131,7 +131,7 @@ function projectTemplate(project, i) {
         <h4 class="tech-type">/${project.type}/</h4>
         <div class="text-image-wrapper">
           <div class="image-container">
-            <a href="${project.live_url}" target="_blank" rel="noreferrer" title="Go to live demo"><img src="${project.img_url}"/></a>
+            <a href="${project.live_url}" target="_blank" rel="noreferrer" title="Go to live demo"><img src="${project.img_url}" alt="Image of ${project.name}"/></a>
           </div>
           <p>${project.description}</p>
         </div>
