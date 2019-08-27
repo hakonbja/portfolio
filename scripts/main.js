@@ -106,15 +106,15 @@ function projectTemplate(project, i) {
   <article class="${(i % 2 == 1) ? `flyLeft` : `flyRight`}">
     <div class="desktop">
       <aside class="image">
-        <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
+        <a href="${project.live_url}" target="_blank" rel="noreferrer" title="Go to live demo"><img src="${project.img_url}" alt="Image of ${project.name}"/></a>
       </aside>
       <div class="mid-container">
         <h3>${project.name}</h3>
         <p>${project.description}</p>
         <div class="links-container">
           <ul class="links">
-            ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank">Live Demo</a></li>` : ``}
-            ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank">View Code</a></li>` : ``}
+            ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank" rel="noreferrer">Live Demo</a></li>` : ``}
+            ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank" rel="noreferrer">View Code</a></li>` : ``}
           </ul>
         </div>
       </div>
@@ -131,7 +131,7 @@ function projectTemplate(project, i) {
         <h4 class="tech-type">/${project.type}/</h4>
         <div class="text-image-wrapper">
           <div class="image-container">
-            <a href="${project.live_url}" target="_blank" title="Go to live demo"><img src="${project.img_url}"/></a>
+            <a href="${project.live_url}" target="_blank" rel="noreferrer" title="Go to live demo"><img src="${project.img_url}"/></a>
           </div>
           <p>${project.description}</p>
         </div>
@@ -139,8 +139,8 @@ function projectTemplate(project, i) {
           ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
         </ul>
         <ul class="links">
-          ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank">Live Demo</a></li>` : ``}
-          ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank">View Code</a></li>` : ``}
+          ${(project.live_url) ? `<li><a href="${project.live_url}" target="_blank" rel="noreferrer">Live Demo</a></li>` : ``}
+          ${(project.code_url) ? `<li><a href="${project.code_url}" target="_blank" rel="noreferrer">View Code</a></li>` : ``}
         </ul>
       </div>
 
