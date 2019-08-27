@@ -607,17 +607,19 @@ aside img {
   color: #1A2B3E; }
 
 .about .image-container.desktop {
-  top: -10px;
   max-width: 350px;
   width: 130%;
   height: auto; }
   .about .image-container.desktop .about-photo {
+    position: relative;
+    top: -10px;
     width: 100%;
     height: auto; }
 
 .about .image-container.mobile {
   float: left;
   width: 50%;
+  top: 5px;
   margin-right: 0.5rem; }
   .about .image-container.mobile .about-photo {
     width: 100%;
@@ -647,6 +649,28 @@ aside img {
     margin-right: 0; } }
 
 /* Contact section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 12vw 1fr;
+  margin-left: -12vw; }
+
+.contact h4 {
+  grid-column: 1;
+  color: #1A2B3E;
+  text-align: center; }
+
+@media screen and (max-width: 1210px) {
+  .contact h4 {
+    display: none; } }
+
+.contact-form {
+  position: relative;
+  grid-column: 2; }
+  .contact-form > div {
+    margin-top: 16px; }
+  .contact-form > div:first-of-type {
+    margin-top: 0; }
+
 label,
 input,
 textarea,
@@ -655,7 +679,6 @@ textarea,
   font-size: 18px; }
 
 label {
-  margin-top: 16px;
   margin-bottom: 8px; }
 
 input:not(.submit-button), textarea {

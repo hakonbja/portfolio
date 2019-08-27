@@ -35,12 +35,13 @@
   }
   
   .image-container.desktop {
-    top: -10px;
     max-width: 350px;
     width: 130%;
     height: auto;
 
     .about-photo {
+      position: relative;
+      top: -10px;
       width: 100%;
       height: auto;
     }
@@ -49,6 +50,7 @@
   .image-container.mobile {
     float: left;
     width: 50%;
+    top: 5px;
     margin-right: 0.5rem;
 
     .about-photo {

@@ -1,5 +1,38 @@
 /* Contact section */
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 12vw 1fr;
+  margin-left: -12vw;
+}
+
+.contact {
+  h4 {
+    grid-column: 1;
+    color: $darkblue;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .contact h4 {
+    display: none;
+  }
+}
+
+.contact-form {
+  position: relative;
+  grid-column: 2;
+
+  > div {
+    margin-top: 16px;
+  }
+
+  > div:first-of-type {
+    margin-top: 0;
+  }
+}
+
 label,
 input,
 textarea,
@@ -9,7 +42,7 @@ textarea,
 }
 
 label {
-  margin-top: 16px;
+  // margin-top: 16px;
   margin-bottom: 8px;
 }
 
