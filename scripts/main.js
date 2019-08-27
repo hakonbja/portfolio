@@ -253,7 +253,6 @@ function enableFormSubmission() {
 }
 
 function sendDataToAPI(e) {
-  console.log("sending to API: ");
   e.preventDefault();
 
   document.getElementById('submit-success').classList.remove('submit-shown');
@@ -280,7 +279,6 @@ function sendDataToAPI(e) {
 
   fetch(lambdaRequest)
   .then(response => {
-    console.log(response.status);
     if (response.status === 200) {
       onSubmitSuccess();
     } else {
@@ -365,7 +363,6 @@ function changeOpacity(startPct, endPct, id, bool) {
 function ifMac() {
   if (navigator.appVersion.indexOf("Mac")!=-1) {
     document.getElementById('frame').style.paddingTop = '0.2em';
-    console.log("padding changed on frame");
   }
 }
 
