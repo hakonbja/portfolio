@@ -2,22 +2,8 @@
 
 const projects = [
   {
-    "name": "Smokey Feet",
-    "description": "The WordPress API is used to fetch the content into a React app. With a custom WordPress plug-in custom post types were added and made available to the WordPress API.",
-    "live_url": "https://www.smokeyfeet.com",
-    "code_url": "https://github.com/hakonbja/smokeyTen",
-    "img_url": "../images/sf_card_img.jpg",
-    "type": "website",
-    "technologies": [
-      "React.js",
-      "REST API",
-      "PHP",
-      "HTML/CSS"
-    ]
-  },
-  {
     "name": "Swing Foundation",
-    "description": "A multi page website built with WordPress. Makes use of a custom theme and custom plugins.",
+    "description": "A multi page website built on WordPress, styled with a custom theme. New content has to be added frequently and old content changed. With the use of custom post types this process can be done quickly via the WordPress Admin Dashboard.",
     "live_url": "https://www.swingfoundation.nl",
     "code_url": "https://github.com/hakonbja/swingfoundation",
     "img_url": "../images/swifo_card_img.png",
@@ -31,27 +17,38 @@ const projects = [
   },
   {
     "name": "Mastermind",
-    "description": "A React.js version of the board game Mastermind from the 70's. Try to guess the color code in as few tries possible.",
+    "description": "A React version of the board game Mastermind from the 70’s. The goal of the game is to guess a color combination with the help of hints. I had made this game before, using JS and jQuery, in the beginning of 2018. One and a half year later I saw that I could do it better and decided to re-make it.",
     "live_url": "https://mm2.hakonbjarnason.com",
     "code_url": "https://github.com/hakonbja/mastermind_v2",
     "img_url": "../images/mm_card_img.png",
     "type": "game",
     "technologies": [
-      "React.js",
+      "React",
       "HTML/CSS"
     ]
   },
   {
-    "name": "Pianist Hákon Bjarnason",
-    "description": "My first public website I made for my own piano teaching business.",
-    "live_url": "https://hakonbjarnason.com",
-    "code_url": "https://github.com/hakonbja/hakonbjarnason.com",
-    "img_url": "../images/hb_card_img.jpg",
-    "type": "website",
+    "name": "Invoice Maker",
+    "description": "An app made in Google Apps Script to create invoices for my piano teaching business. It uses the Google Calendar API to import planned classes and calculate the prices.",
+    "code_url": "https://github.com/hakonbja/invoice_maker",
+    "img_url": "../images/invoicemaker_logos_only.png",
+    "type": "app",
     "technologies": [
-      "jQuery",
-      "Bootstrap",
-      "AWS",
+      "Apps Script",
+      "HTML/CSS"
+    ]
+  },
+  {
+    "name": "Smokey Feet",
+    "description": "A remake of a website built on WordPress. Made in React and uses WordPress as a headless CMS.",
+    "live_url": "https://www.smokeyfeet.com",
+    "code_url": "https://github.com/hakonbja/smokeyTen",
+    "img_url": "../images/sf_card_img.jpg",
+    "type": "in progress",
+    "technologies": [
+      "React",
+      "REST API",
+      "PHP",
       "HTML/CSS"
     ]
   },
@@ -70,7 +67,7 @@ const skills = [
   {
     "header": "Tools I use",
     "skills": [
-      "React.js",
+      "React",
       "ESLint",
       "Gulp",
       "NPM",
