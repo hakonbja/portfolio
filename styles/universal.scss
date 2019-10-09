@@ -369,6 +369,10 @@ section > h1.stroke {
 
   section {
     margin-bottom: 150px;
+
+    > h1 {
+      top: 0.45em;
+    }
   }
 
   .padding {

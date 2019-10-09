@@ -278,6 +278,8 @@ section > h1.stroke {
     margin-right: 10vw; }
   section {
     margin-bottom: 150px; }
+    section > h1 {
+      top: 0.45em; }
   .padding {
     padding-right: 7vw;
     padding-left: 7vw; } }
