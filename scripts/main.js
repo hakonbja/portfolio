@@ -12,6 +12,7 @@ const projects = [
       "Gulp",
       "WordPress",
       "PHP",
+      "JavaScript",
       "HTML/CSS"
     ]
   },
@@ -35,6 +36,7 @@ const projects = [
     "type": "app",
     "technologies": [
       "Apps Script",
+      "JavaScript",
       "HTML/CSS"
     ]
   },

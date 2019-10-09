@@ -65,11 +65,14 @@ textarea {
   position: relative;
   background-color: white;
   width: min-content;
-  margin: 24px auto 64px;
+  margin: 24px auto 64px !important; // to override .contact-form > div margin
 }
 
 .submit-button {
+  position: relative;
   background: $gradient-four;
+  background-size: 200%;
+  background-position: right;
   padding: 12px;
   border: none;
   color: $darkblue;
@@ -79,6 +82,12 @@ textarea {
   font-size: 26px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 400ms;
+  top: 0;
+
+  &:hover {
+    background-position: left;
+  }
 }
 
 .submit-success,
