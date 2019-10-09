@@ -75,6 +75,7 @@ const skills = [
       "NPM",
       "SCSS",
       "Git",
+      "AWS",
       "jQuery",
       "Bootstrap",
       "Wordpress"
