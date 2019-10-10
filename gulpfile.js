@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const rename = require('gulp-rename');
 
 // compile scss into css
 function style() {
@@ -17,15 +19,25 @@ function style() {
     .pipe(browserSync.stream());
 }
 
-function watch() {
+function compile() {
+  return gulp.src([
+    'node_modules/babel-polyfill/dist/polyfill.js',
+    './scripts/main.js'
+  ])
+  .pipe(babel({presets: ['@babel/preset-env']}))
+  .pipe(rename('main_compiled.js'))
+  .pipe(gulp.dest('./scripts'));
+}
+
+function stream() {
   browserSync.init({
     server: {
       baseDir: './'
     }
   });
   gulp.watch('./styles/**/*.scss', style);
-  gulp.watch('./**/*.html').on('change', browserSync.reload)
-  gulp.watch('./scripts/**/*.js').on('change', browserSync.reload);
+  gulp.watch('./**/*.html').on('change', browserSync.reload);
+  gulp.watch('./scripts/main.js').on('change', gulp.series(compile, browserSync.reload));
 }
 
-exports.default = watch;
+exports.default = stream;
