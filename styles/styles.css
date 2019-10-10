@@ -781,3 +781,15 @@ textarea {
 .submit-shown {
   opacity: 1;
   visibility: visible; }
+
+@media all and (-ms-high-contrast: none) {
+  textarea.form-message {
+    -ms-overflow-style: none;
+    overflow: auto; }
+  .submit-wrapper {
+    background-color: transparent; }
+  .submit-button {
+    margin: 0 auto;
+    color: #1A2B3E;
+    background: white;
+    border: 3px solid #1A2B3E; } }
