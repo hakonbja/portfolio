@@ -19,7 +19,13 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
-    "gulp-rename": "^1.4.0",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2"
-  }
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

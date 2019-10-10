@@ -183,26 +183,27 @@ function setSectionsObservers() {
   const options = {
     rootMargin: "-445px 0px -240px 0px",
   };
-  
-  const sectionsObserver = new IntersectionObserver((entries) => {
-    entries.forEach( (entry) => {
-      const linkId = `${entry.target.id}Link`
-      const link = document.getElementById(linkId);
-  
-      if (link) {
-        if (entry.isIntersecting) {
-          link.classList.add('selected')
-        } else if (!entry.isIntersecting) {
-          link.classList.remove('selected')
+  if ('IntersectionObserver' in window) {
+    const sectionsObserver = new IntersectionObserver((entries) => {
+      entries.forEach( (entry) => {
+        const linkId = `${entry.target.id}Link`
+        const link = document.getElementById(linkId);
+    
+        if (link) {
+          if (entry.isIntersecting) {
+            link.classList.add('selected')
+          } else if (!entry.isIntersecting) {
+            link.classList.remove('selected')
+          }
         }
-      }
-      
+        
+      });
+    }, options);
+    
+    sections.forEach((section) => {
+      sectionsObserver.observe(section);
     });
-  }, options);
-  
-  sections.forEach((section) => {
-    sectionsObserver.observe(section);
-  });
+  }
 }
 
   /* home <-> navbar observer */
@@ -210,17 +211,19 @@ function setHeroObserver() {
   const home = document.getElementById('home');
   const header = document.getElementsByTagName('header')[0];
 
-  const homeObserver = new IntersectionObserver((entries) => {
-    entries.forEach( (entry) => {
-      if (!entry.isIntersecting) {
-        header.classList.add('visible');
-      } else if (entry.isIntersecting) {
-        header.classList.remove('visible');
-      }
+  if ('IntersectionObserver' in window) {
+    const homeObserver = new IntersectionObserver((entries) => {
+      entries.forEach( (entry) => {
+        if (!entry.isIntersecting) {
+          header.classList.add('visible');
+        } else if (entry.isIntersecting) {
+          header.classList.remove('visible');
+        }
+      });
     });
-  });
-
-  homeObserver.observe(home);
+  
+    homeObserver.observe(home);
+  }
 }
 
   /* article <-> flying observer */
@@ -230,19 +233,25 @@ function setArticleObserver() {
   const options = {
     rootMargin: '0px 0px -250px 0px',
   };
-  
-  const articlesObserver = new IntersectionObserver((entries) => {
-    entries.forEach( (entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('flown');
-        articlesObserver.unobserve(entry.target);
-      }
-    });
-  }, options);
 
-  articles.forEach( (article) => {
-    articlesObserver.observe(article);
-  })
+  if ('IntersectionObserver' in window) {
+    const articlesObserver = new IntersectionObserver((entries) => {
+      entries.forEach( (entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('flown');
+          articlesObserver.unobserve(entry.target);
+        }
+      });
+    }, options);
+  
+    articles.forEach( (article) => {
+      articlesObserver.observe(article);
+    })
+  } else {
+    articles.forEach( (article) => {
+      article.classList.add('flown');
+    })
+  }  
 }
 
 

@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
-const rename = require('gulp-rename');
+const concat = require('gulp-concat');
 
 // compile scss into css
 function style() {
@@ -12,7 +12,7 @@ function style() {
   // 2. pass that file through sass compiler
     .pipe(sass().on('error', sass.logError))
   // 2.1 autoprefix
-    .pipe(autoprefixer({}))
+    .pipe(autoprefixer({ grid: true }))
   // 3. where do I save the compiled CSS
     .pipe(gulp.dest('./styles'))
   // 4. stream changes to all browsers
@@ -22,10 +22,11 @@ function style() {
 function compile() {
   return gulp.src([
     'node_modules/babel-polyfill/dist/polyfill.js',
+    './scripts/polyfills.js',
     './scripts/main.js'
   ])
   .pipe(babel({presets: ['@babel/preset-env']}))
-  .pipe(rename('main_compiled.js'))
+  .pipe(concat('main_compiled.js'))
   .pipe(gulp.dest('./scripts'));
 }
 
