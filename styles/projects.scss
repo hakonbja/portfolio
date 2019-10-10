@@ -34,6 +34,7 @@ article.flown {
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 2.5fr 1fr;
+  -ms-grid-columns: 1fr 25px 2.5fr 25px 1fr; // to mimick the column gap
   grid-column-gap: 25px;
 
   .tech-list {
@@ -63,6 +64,7 @@ article:nth-of-type(odd) .desktop {
 
   .mid-container {
     grid-column: 2;
+    -ms-grid-column: 3;
     grid-row: 1;
 
     h3, p {
@@ -73,18 +75,25 @@ article:nth-of-type(odd) .desktop {
   aside.tech {
     text-align: left;
     grid-column: 3;
+    -ms-grid-column: 5;
     grid-row: 1;
+  }
+
+  .tech-list {
+    align-items: flex-start;
   }
 }
 
 article:nth-of-type(even) .desktop {
   aside.image {
     grid-column: 3;
+    -ms-grid-column: 5;
     grid-row: 1;
   }
 
   .mid-container {
     grid-column: 2;
+    -ms-grid-column: 3;
     grid-row: 1;
   }
 
@@ -135,13 +144,11 @@ aside {
 
 .tech-list li,
 .skills-list li {
-  display: block;
   color: $darkblue;
   border: 2px solid $darkblue;
   width: max-content;
   margin: 0.2rem 0;
   padding: 0.4em 0.4rem 0.2em;
-  // padding: 0.3em;
 }
 
 .projects article .mobile { // mobile is visible at and below 640px
@@ -152,7 +159,6 @@ aside {
     margin-bottom: 2rem;
     display: grid;
     grid-column-gap: 1rem;
-    // height: max-content;
   }
 
   .image-container {
@@ -160,7 +166,6 @@ aside {
     transform: scale(1.35);
     position: relative;
     top: -0.4rem;
-    // margin-bottom: -2.4rem;
 
     img {
       width: 100%;
@@ -176,7 +181,6 @@ aside {
     li {
       display: inline-block;
       margin-right: 0.5rem;
-      // padding-top: 0.2em;
     }
   }
 
@@ -194,7 +198,6 @@ aside {
   }
 
   .image-container {
-    // right: 38px;
     grid-column: 1 / 2;
     transform-origin: right;
   }
@@ -215,7 +218,6 @@ aside {
   }
 
   .image-container {
-    // left: 0;
     grid-column: 2 / 3;
     grid-row: 1;
     transform-origin: left;
