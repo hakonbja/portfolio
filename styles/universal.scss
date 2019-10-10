@@ -214,7 +214,11 @@ section > h1.stroke {
   z-index: 2;
   color: $darkblue;
   -webkit-text-fill-color: #fff0;
-  -webkit-text-stroke: 2px #1A2B3E; 
+  -webkit-text-stroke: 2px #1A2B3E;
+
+  @media all and (-ms-high-contrast: none) {
+    color: white;
+  }
 }
 
 .padding {

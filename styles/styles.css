@@ -182,6 +182,9 @@ section > h1.stroke {
   color: #1A2B3E;
   -webkit-text-fill-color: #fff0;
   -webkit-text-stroke: 2px #1A2B3E; }
+  @media all and (-ms-high-contrast: none) {
+    section > h1.stroke {
+      color: white; } }
 
 .padding {
   padding: 6.8rem 12vw; }
