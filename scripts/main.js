@@ -9,10 +9,9 @@ const projects = [
     "img_url": "../images/swifo_card_img.png",
     "type": "website",
     "technologies": [
-      "Gulp",
+      "JavaScript",
       "WordPress",
       "PHP",
-      "JavaScript",
       "HTML/CSS"
     ],
     "order": "4"
