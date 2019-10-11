@@ -43,7 +43,7 @@ const projects = [
     ],
     "order": "3"
   },
-  
+
   {
     "name": "Smokey Feet",
     "description": "A remake of a website built on WordPress. Made in React JS and uses WordPress as a headless CMS. The website’s goal is to attract participant to the yearly dance festival Smokey Feet and present the necessary information for them to make that choice, such as schedules, prices and activities.",
@@ -319,8 +319,6 @@ function onSubmitFailure() {
 /* Fade things on scroll */
 
 function setFadeChanges() {
-
-
   window.addEventListener('scroll', () => {
     decreaseOpacity(0.05, 0.95, 'bg-gradient');
     increaseOpacity(0.45, 0.85, 'logo');
