@@ -216,7 +216,11 @@ section > h1.stroke {
   -webkit-text-fill-color: #fff0;
   -webkit-text-stroke: 2px #1A2B3E;
 
-  @media all and (-ms-high-contrast: none) {
+  @media all and (-ms-high-contrast: none) { // IE 10+11
+    color: white;
+  }
+
+  @supports (-ms-ime-align:auto) { // Edge 12+
     color: white;
   }
 }

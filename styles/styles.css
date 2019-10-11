@@ -185,6 +185,9 @@ section > h1.stroke {
   @media all and (-ms-high-contrast: none) {
     section > h1.stroke {
       color: white; } }
+  @supports (-ms-ime-align: auto) {
+    section > h1.stroke {
+      color: white; } }
 
 .padding {
   padding: 6.8rem 12vw; }
