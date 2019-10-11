@@ -757,10 +757,9 @@ textarea {
   font-size: 26px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 400ms;
   top: 0; }
-  .submit-button:hover {
-    background-position: left; }
+  .submit-button:active {
+    transform: translateY(1px); }
 
 .submit-success,
 .submit-failure {

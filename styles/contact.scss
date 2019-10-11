@@ -42,7 +42,6 @@ textarea,
 }
 
 label {
-  // margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -63,7 +62,6 @@ textarea {
 
 .submit-wrapper {
   position: relative;
-  // background-color: white;
   width: min-content;
   margin: 24px auto 64px !important; // to override .contact-form > div margin
 }
@@ -78,11 +76,10 @@ textarea {
   font-size: 26px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 400ms;
   top: 0;
 
-  &:hover {
-    background-position: left;
+  &:active {
+    transform: translateY(1px);
   }
 }
 
