@@ -63,22 +63,24 @@ textarea {
 
 .submit-wrapper {
   position: relative;
-  background-color: white;
+  // background-color: white;
   width: min-content;
   margin: 24px auto 64px !important; // to override .contact-form > div margin
 }
 
 .submit-button {
   position: relative;
-  background: $gradient-four;
-  background-size: 200%;
-  background-position: right;
+  margin: 0 auto;
+  // background: $gradient-four;
+  // background-size: 200%;
+  // background-position: right;
   padding: 12px;
   border: none;
-  color: $darkblue;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #ae7f5b;
+  background-color: white;
+  // -webkit-text-fill-color: transparent;
+  // -webkit-background-clip: text;
+  // background-clip: text;
   font-size: 26px;
   text-transform: uppercase;
   cursor: pointer;
@@ -113,16 +115,5 @@ textarea {
   textarea.form-message {
     -ms-overflow-style: none;
     overflow: auto;
-  }
-
-  .submit-wrapper {
-    background-color: transparent;
-  }
-
-  .submit-button {
-    margin: 0 auto;
-    color: $darkblue;
-    background: white;
-    border: 3px solid $darkblue;
   }
 }

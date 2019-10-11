@@ -742,7 +742,6 @@ textarea {
 
 .submit-wrapper {
   position: relative;
-  background-color: white;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -750,15 +749,11 @@ textarea {
 
 .submit-button {
   position: relative;
-  background: linear-gradient(138.93deg, #AF6565 19.66%, #ABB448 125.72%);
-  background-size: 200%;
-  background-position: right;
+  margin: 0 auto;
   padding: 12px;
   border: none;
-  color: #1A2B3E;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: #ae7f5b;
+  background-color: white;
   font-size: 26px;
   text-transform: uppercase;
   cursor: pointer;
@@ -788,11 +783,4 @@ textarea {
 @media all and (-ms-high-contrast: none) {
   textarea.form-message {
     -ms-overflow-style: none;
-    overflow: auto; }
-  .submit-wrapper {
-    background-color: transparent; }
-  .submit-button {
-    margin: 0 auto;
-    color: #1A2B3E;
-    background: white;
-    border: 3px solid #1A2B3E; } }
+    overflow: auto; } }
