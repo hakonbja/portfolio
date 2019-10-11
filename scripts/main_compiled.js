@@ -10903,7 +10903,7 @@ var projects = [{
   "code_url": "https://github.com/hakonbja/swingfoundation",
   "img_url": "../images/swifo_card_img.png",
   "type": "website",
-  "technologies": ["Gulp", "WordPress", "PHP", "JavaScript", "HTML/CSS"],
+  "technologies": ["JavaScript", "WordPress", "PHP", "HTML/CSS"],
   "order": "4"
 }, {
   "name": "Mastermind",
