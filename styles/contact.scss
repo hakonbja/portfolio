@@ -69,7 +69,7 @@ textarea {
 .submit-button {
   position: relative;
   margin: 0 auto;
-  padding: 12px;
+  padding: 12px; // TODO: make padding-bottom: 6.5px for safari
   border: none;
   color: #ae7f5b;
   background-color: white;
@@ -101,8 +101,7 @@ textarea {
   visibility: visible;
 }
 
-@media all and (-ms-high-contrast: none) {
-
+@media all and (-ms-high-contrast: none) { // IE11
   textarea.form-message {
     -ms-overflow-style: none;
     overflow: auto;

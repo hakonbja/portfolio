@@ -92,6 +92,9 @@ header img {
   height: 3em;
   box-sizing: border-box; }
 
+nav {
+  height: 100%; }
+
 nav ul {
   display: flex;
   height: 100%;

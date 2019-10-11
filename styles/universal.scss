@@ -92,6 +92,10 @@ header img {
   box-sizing: border-box;
 }
 
+nav {
+  height: 100%; // for safari
+}
+
 nav ul {
   display: flex;
   height: 100%;
