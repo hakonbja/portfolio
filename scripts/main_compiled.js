@@ -10937,10 +10937,10 @@ var skills = [{
   "skills": ["HTML", "CSS", "JavaScript", "PHP"]
 }, {
   "header": "Tools I use",
-  "skills": ["React", "ESLint", "Gulp", "NPM", "SCSS", "Git", "AWS", "jQuery", "Bootstrap", "Wordpress"]
+  "skills": ["React", "Git", "NPM", "SCSS", "Gulp", "ESLint", "AWS", "jQuery", "Bootstrap", "Wordpress"]
 }, {
   "header": "Software I use",
-  "skills": ["VS Code", "Figma", "Illustrator", "Photoshop", "InDesign"]
+  "skills": ["Figma", "Illustrator", "Photoshop", "InDesign", "VS Code"]
 }, {
   "header": "Languages I speak",
   "skills": ["English", "Dutch", "Icelandic"]

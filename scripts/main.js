@@ -68,32 +68,32 @@ const skills = [
       "HTML",
       "CSS",
       "JavaScript",
-      "PHP"
+      "PHP",
     ]
   },
   {
     "header": "Tools I use",
     "skills": [
       "React",
-      "ESLint",
-      "Gulp",
+      "Git",
       "NPM",
       "SCSS",
-      "Git",
+      "Gulp",
+      "ESLint",
       "AWS",
       "jQuery",
       "Bootstrap",
-      "Wordpress"
+      "Wordpress",
     ]
   },
   {
     "header": "Software I use",
     "skills": [
-      "VS Code",
       "Figma",
       "Illustrator",
       "Photoshop",
-      "InDesign"
+      "InDesign",
+      "VS Code",
     ]
   },
   {
