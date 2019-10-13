@@ -10898,7 +10898,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 var projects = [{
   "name": "Swing Foundation",
-  "description": "A multi page website for a dance school built on WordPress that uses a custom theme and a number of custom post types. The website supports the school with it’s promotion of events, registrations and communications.",
+  "description": "A multi page website for a dance school, built on WordPress that uses a custom theme and a number of custom post types. The website supports the school with it’s promotion of events, registrations and communications.",
   "live_url": "https://www.swingfoundation.nl",
   "code_url": "https://github.com/hakonbja/swingfoundation",
   "img_url": "../images/swifo_card_img.png",
@@ -10907,7 +10907,7 @@ var projects = [{
   "order": "4"
 }, {
   "name": "Mastermind",
-  "description": "A React version of the board game Mastermind from the 70’s. The goal of the game is to guess a color combination with the help of hints. I had made this game before, using JS and jQuery, in the beginning of 2018. One and a half year later I saw that I could do it better and decided to re-make it.",
+  "description": "A React JS version of the board game Mastermind from the 70’s. The goal of the game is to guess a color combination with the help of hints. I had made this game before, using JS and jQuery, in the beginning of 2018. One and a half year later I saw room for improvement and decided to re-make it.",
   "live_url": "https://mm2.hakonbjarnason.com",
   "code_url": "https://github.com/hakonbja/mastermind_v2",
   "img_url": "../images/mm_card_img.png",
@@ -10920,11 +10920,11 @@ var projects = [{
   "code_url": "https://github.com/hakonbja/invoice_maker",
   "img_url": "../images/invoicemaker_logos_only.png",
   "type": "app",
-  "technologies": ["Apps Script", "JavaScript", "HTML/CSS"],
+  "technologies": ["Apps Script", "REST API", "JavaScript", "HTML/CSS"],
   "order": "3"
 }, {
   "name": "Smokey Feet",
-  "description": "A remake of a website built on WordPress. Made in React JS and uses WordPress as a headless CMS. The website’s goal is to attract participant to the yearly dance festival Smokey Feet and present the necessary information for them to make that choice, such as schedules, prices and activities.",
+  "description": "The second redesign of a website built on WordPress. Made in React JS and uses WordPress as a headless CMS. The website’s goal is to attract participants to the yearly dance festival Smokey Feet and present them the necessary information to make that choice, such as schedules, prices and activities.",
   "live_url": "https://www.smokeyfeet.com",
   "code_url": "https://github.com/hakonbja/smokeyTen",
   "img_url": "../images/sf_card_img.jpg",
