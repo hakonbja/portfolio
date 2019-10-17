@@ -111,7 +111,7 @@ function projectTemplate(project, i) {
   <article class="${(i % 2 == 1) ? `flyLeft` : `flyRight`}">
     <div class="desktop">
       <aside class="image">
-        <a href="${project.live_url}" target="_blank" rel="noreferrer" title="Go to live demo"><img src="${project.img_url}" alt="Image of ${project.name}"/></a>
+        <a href="${(project.live_url) ? `${project.live_url}` : `${project.code_url}`} " target="_blank" rel="noreferrer" title="${(project.live_url) ? `Go to live demo` : `View code`}"><img src="${project.img_url}" alt="Image of ${project.name}"/></a>
       </aside>
       <div class="mid-container">
         <h3>${project.name}</h3>
